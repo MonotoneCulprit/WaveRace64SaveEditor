@@ -12,7 +12,6 @@ Cracking this seems to be what's needed to enable save manipulation.
 100% Save shows BD 7B with Stereo and Music On
 Possible that every setting corresponds with a number, and this is those various setting numbers added together. This is also how the N64 sends simultaneous Controller inputs.
 
-
 0x4-0x7 - FF Spaces
 
 0x8-0xC - Likely Championship Completion & Dolphin Unlock Data.
