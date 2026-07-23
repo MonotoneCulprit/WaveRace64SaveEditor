@@ -2,19 +2,13 @@ Wave Race 64 - On Cart Save Hex Offsets (EEPROM/.eep)
 
 0x0-0x1 - This seems to always stay as 54 45 (TE). Header of some kind.
 
-0x2 - Possibly Settings. Also possibly linked to the following pair.
-Possible that every setting corresponds with a number, and this is those various setting numbers added together. This is also how the N64 sends simultaneous controller inputs.
-
-0x3 - This changes seemingly when you do anything at all. If you attempt to manipulate a Save without also changing this it will fail.
-Cracking this seems to be what's needed to enable save manipulation.
-
-0x2-0x3 - Blank data starts as C8 63. Default settings of Stereo and Music On
-100% Save shows BD 7B with Stereo and Music On
-Possible that every setting corresponds with a number, and this is those various setting numbers added together. This is also how the N64 sends simultaneous Controller inputs.
+0x2-0x3 - CHECKSUM
+This Checksum is calculated by summing all succeeding Bytes (0x4-0x1FF).
+For a blank save this is C8 63
 
 0x4-0x7 - FF Spaces
 
-0x8-0xC - Likely Championship Completion & Dolphin Unlock Data.
+0x8-0xC - Settings and Unlock Data?
 Default is 01 00 00 00 00
 100% Save shows 06 06 07 07 0F
 
@@ -44,7 +38,6 @@ Each pair denotes position of Dash from 00 to 0B (0-11).
 DEFAULT CRAFT SETTINGS???
 
 0x44-0x4F - Every Byte is set to 05. Same length as Craft Settings data.
-Changing these breaks the save
 
 CONDITIONS
 
@@ -55,6 +48,7 @@ CONDITIONS
 3 Bytes - Wave Conditions, Number of Misses, Number of Laps
 Default is 00 05 03
 Wave Conditions - 00 is Normal, 01 is Calm, 02 is Wild, 03 is Random
+Misses and Laps are stored as raw values (05 for 5 Misses, 03 for 3 Laps).
 
 FF SPACES TO SEPARATE SETTINGS FROM COURSE DATA
 
