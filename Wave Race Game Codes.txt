@@ -1,0 +1,7 @@
+Wave Race 64 Memory Pak Save files contain 2 lines.
+1. A line containing the identifier shown below in ASCII (i.e NWRJ) and location data.
+2. The name of the game in N64 Font Code (i.e. WAVERACE64)
+
+Wave Race 64 	NUS-NWRE/NUS-NWRE-USA
+Wave Race 64 	NUS-NWRP/NUS-NWRP-EUR
+Wave Race 64 (Japan) 	NUS-NWRJ/NUS-NWRJ-JPN
