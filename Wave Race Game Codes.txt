@@ -1,6 +1,8 @@
 Wave Race 64 Memory Pak Save files contain 2 lines.
-1. A line containing the identifier shown below in ASCII (i.e NWRJ) and location data.
-2. The name of the game in N64 Font Code (i.e. WAVERACE64)
+1. A line containing the identifier shown below in ASCII (i.e NWRJ), publisher, and location.
+2. The file name in N64 Font Code. Often just the name of the game
+Standard Save Data is saved as WAVERACE64
+Dolphin Save Data is saved as WAVERACE64.G
 
 Wave Race 64 	NUS-NWRE/NUS-NWRE-USA
 Wave Race 64 	NUS-NWRP/NUS-NWRP-EUR
