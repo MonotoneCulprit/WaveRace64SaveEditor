@@ -1,7 +1,7 @@
 # WaveRace64SaveEditor
 A Save Editor for the game Wave Race 64
 
-# Some Resources
+# Resources that helped me progress this project
 [Nintendo 64 Programming Manual from Ultra64](https://ultra64.ca/files/documentation/online-manuals/man/pro-man/start/index.html)
 
 [MPKEdit by Bryc](https://bryc.github.io/mpkedit/)
