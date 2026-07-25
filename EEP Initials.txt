@@ -3,25 +3,25 @@ While the character names are encoded in ASCII the initials for record do not us
 While storing a set of initials in ASCII would require 3 bytes it is possible to represent the entire alphabet and some additional characters in only 2 bytes by splitting the characters into 5 bit sets instead of the 7 or 8 bits required by ASCII.
 
 For each record the initials are stored as 16 bits (2 bytes).
-The first bit indicates whether the record uses custom initials or not. 0 = no, 1 = yes.
+The first bit indicates whether the record uses Custom Craft Settings. 0 = no, 1 = yes.
 The last 15 bits are split into 5 bits of each of the initial slots.
 The translation table is shown at the bottom of this document.
 
 On a default save this is 01110011 10011100.
-0 = No custom initials
+0 = Default Craft Settings
 11100 = 28 = -
 11100 = 28 = -
 11100 = 28 = -
 
 Further Examples:
 M-C = 10110111 10000011
-1 = Yes custom initials
+1 = Custom Craft Settings
 01101 = 13 = M
 11100 = 28 = -
 00011 = 3 = C
 
 TLF = 11010001 10000110
-1 = Yes custom initials
+1 = Custom Craft Settings
 10100 = 20 = T
 01100 = 12 = L
 00110 = 6 = F
