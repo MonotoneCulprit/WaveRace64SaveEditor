@@ -5,25 +5,33 @@ Forward 3 Lap & Best Lap Records are stored from 0x60-0x11F.
 Scores are stored from 0x120-0x1A6.
 Reverse Records are stored from 0x1D8-0x1FF.
 
-3 Lap and Best Lap 6 Byte explanation:
-Byte 1: Character data and Start of 3 byte integer for time.
+3 Lap and Best Lap 6 Byte Explanation:
+Byte 1: Character data and start of 3 byte integer for time.
 The Character is represented as 00, 20, 40, or 60. 00 = Hayami, 20 = Mariner, 40 = Stewart, 60 = Jeter.
-Bytes 1, 2, and 3: Integer representing the time in milliseconds. Subtract the Character data to get the correct integer (i.e 61 become 01).
-Bytes 4 & 5: Custom initials or lack thereof.
-Byte 6: Custom Craft Use. 00 is No. 01 is yes.
+Bytes 1, 2, & 3: Integer representing the time in milliseconds. Subtract the Character data to get the correct integer (i.e 61 become 01).
+Bytes 4 & 5: Custom Craft Settings and Custom initials. 
+Byte 6: Difficulty Level. 00 = Normal, 01 = Hard, 02 = Expert.
 
+Score & Reverse Record Explanation:
+Stored exactly the same as above, but the Difficulty Level byte is dropped.
 
 EXAMPLES:
-The default Sunny Beach Forward 3 Lap Record is stored as 01 5F 90 73 9C 00.
+The default 1st Place Sunny Beach Forward 3 Lap Record is stored as 01 5F 90 73 9C 00.
 
 01 = 00 = Hayami
 01 5F 90 = 65536 24320 144 = 90000 milliseconds = 1:30.000
-73 9C = 01110011 10011100 = 0 11100 11100 11100 = (No Custom Initials) - - -
-00 = Default Craft Settings
+73 9C = 01110011 10011100 = 0 11100 11100 11100 = (Default Craft Settings) - - -
+00 = Normal Difficulty
 
-My current Sunny Beach Forward 3 Lap Record is stored as 20 F9 B9 B7 83 00.
+My current 1st Place Sunny Beach Forward 3 Lap Record is stored as 20 F9 B9 B7 83 00.
 
 20 = Mariner
 20 F9 B9 = 00 F9 B9 = 0 63744 185 = 63929 milliseconds = 1:03.929
-B7 83 = 10110111 10000011 = 1 01101 11100 00011 = (Yes Custom Initials) M - C
-01 = Custom Craft Settings
+B7 83 = 10110111 10000011 = 1 01101 11100 00011 = (Custom Craft Settings) M - C
+00 = Normal Difficulty
+
+The default 1st Place Sunny Beach Score Record is stored as 00 13 88 73 9C.
+00 = Hayami
+00 13 88 = 5000 Points
+73 9C = 01110011 10011100 = 0 11100 11100 11100 = (Custom Craft Settings) - - -
+
