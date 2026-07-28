@@ -3,14 +3,68 @@ Wave Race 64 - On Cart Save Hex Offsets (EEPROM/.eep)
 0x0-0x1 - This seems to always stay as 54 45 (TE). Header of some kind.
 
 0x2-0x3 - CHECKSUM
-This Checksum is calculated by summing all succeeding Bytes (0x4-0x1FF).
+This Checksum is calculated by summing all succeeding single bytes (0x4-0x1FF) and outputting two bytes.
 For a blank save this is C8 63
 
 0x4-0x7 - FF Spaces
 
-0x8-0xC - Settings and Unlock Data?
-Default is 01 00 00 00 00
-100% Save shows 06 06 07 07 0F
+CHAMPIONSHIP PROGRESS
+
+0x8 - Normal Championship Progress (Course Unlock Data)
+01 = Only Sunny Beach
+02 = Sunset Bay
+03 = Drake Lake
+04 = Marine Fortress
+05 = Port Blue
+06 = Southern Island
+
+0x9 - Hard Championship Progress (Course Unlock Data)
+00 = Sunny Beach
+01 = Sunset Bay
+02 = Drake Lake
+03 = Marine Fortress
+04 = Port Blue
+05 = Twilight City
+06 = Southern Island
+
+0xA - Expert Championship Progress (Course Unlock Data)
+00 = Sunny Beach
+01 = Sunset Bay
+02 = Drake Lake
+03 = Marine Fortress
+04 = Port Blue
+05 = Twilight City
+06 = Glacier Coast
+07 = Southern Island
+
+0xB - Reverse Championship Progress (Course Unlock Data)
+00 = Sunny Beach
+01 = Sunset Bay
+02 = Drake Lake
+03 = Marine Fortress
+04 = Port Blue
+05 = Twilight City
+06 = Glacier Coast
+07 = Southern Island
+
+AUDIO AND CHAMPIONSHIP UNLOCKS
+
+0xC - Larger digit (Sound & Music Settings
+Every Audio setting is assigned a value. Larger digit is a sum of those values.
+00 = Stereo, 40 = Mono, 80 = Headphones
+00 = Music On, 20 = Music Off
+Examples: Stereo+Music Off = 20, Headphones + Music Off = A0
+
+Smaller digit (Championship Unlock Data)
+00 = Normal Championship Only
+01 = Hard + Normal
+02 = Expert + Normal (Hard is select-able, but not Expert)
+03 = Expert + Hard + Normal
+04 = Normal Championship Only
+05 = Hard + Normal
+06 = Expert + Normal (Hard is select-able, but not Expert)
+07 = Expert + Hard + Normal
+08-0F = Reverse + Expert + Hard + Normal
 
 0xD-0xF - FF Spaces
 
@@ -37,7 +91,7 @@ Each pair denotes position of Dash from 00 to 0B (0-11).
 
 DEFAULT CRAFT SETTINGS???
 
-0x44-0x4F - Every Byte is set to 05. Same length as Craft Settings data.
+0x44-0x4F - Every Byte is 05. Same length as Custom Craft Settings. Doesn't seem to change anything
 
 CONDITIONS
 
