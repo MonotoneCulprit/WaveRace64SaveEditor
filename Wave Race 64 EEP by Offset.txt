@@ -195,10 +195,10 @@ SPLITS - 0xA7 - FF Space
 0x1AB-0x1AD - Sunny Beach Lap 2 Split
 0x1AE-0x1B0 - Sunset Bay Lap 1 Split
 0x1B1-0x1B3 - Sunset Bay Lap 2 Split
-0x1BA-0x1BC - Marine Fortress Lap 1 Split
-0x1BD-0x1BF - Marine Fortress Lap 2 Split
-0x1B4-0x1B6 - Drake Lake Lap 1 Split
-0x1B7-0x1B9 - Drake Lake Lap 2 Split
+0x1B4-0x1B6 - Marine Fortress Lap 1 Split
+0x1B7-0x1B9 - Marine Fortress Lap 2 Split
+0x1BA-0x1BC - Drake Lake Lap 1 Split
+0x1BD-0x1BF - Drake Lake Lap 2 Split
 0x1C0-0x1C2 - Port Blue Lap 1 Split
 0x1C3-0x1C5 - Port Blue Lap 2 Split
 0x1C6-0x1C8 - Twilight City Lap 1 Split
